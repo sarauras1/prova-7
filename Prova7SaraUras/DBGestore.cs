@@ -10,25 +10,38 @@ namespace Prova7SaraUras
    static class DBGestore
     {
       
-       //Metodo Mancata Connesiione data base 
-         
+      
+       
+       
                 const string connectionString = @"Data Source= (localdb)\MSSQLLocalDB;" +
                                          "Initial Catalog = Scuola;" +
                                          "Integrated Security=true;";
          
 
-      
+    //Metodo Utente non trovato? stiamo facendo un iserimento di studenti con relativi esami e professori
+    //(non ha senso) e sopratutto sono studenti non utenti  
 
-     
-       
 
-        private static SqlCommand GetCommand(SqlConnection connection)
+
+private static SqlCommand GetCommand(SqlConnection connection)
         {
-
-            SqlCommand command = new SqlCommand();
-            command.Connection = connection;
-            command.CommandType = System.Data.CommandType.Text;
-            return command;
+            try
+            {
+             
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandType = System.Data.CommandType.Text;
+                return command;
+                if (!GetCommand())
+                {
+                    throw new
+                }
+            }               
+             catch (Exception ex) {
+                string message = ex.Message;
+                Console.WriteLine(message);
+            }
+           
         }
 
         

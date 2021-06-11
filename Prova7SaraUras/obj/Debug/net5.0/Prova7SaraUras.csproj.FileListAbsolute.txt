@@ -1,0 +1,5 @@
+C:\Users\allbe\source\repos\Prova7SaraUras\Prova7SaraUras\obj\Debug\net5.0\Prova7SaraUras.csprojAssemblyReference.cache
+C:\Users\allbe\source\repos\Prova7SaraUras\Prova7SaraUras\obj\Debug\net5.0\Prova7SaraUras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\allbe\source\repos\Prova7SaraUras\Prova7SaraUras\obj\Debug\net5.0\Prova7SaraUras.AssemblyInfoInputs.cache
+C:\Users\allbe\source\repos\Prova7SaraUras\Prova7SaraUras\obj\Debug\net5.0\Prova7SaraUras.AssemblyInfo.cs
+C:\Users\allbe\source\repos\Prova7SaraUras\Prova7SaraUras\obj\Debug\net5.0\Prova7SaraUras.csproj.CoreCompileInputs.cache
