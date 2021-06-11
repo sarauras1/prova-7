@@ -18,30 +18,28 @@ namespace Prova7SaraUras
                                          "Integrated Security=true;";
          
 
-    //Metodo Utente non trovato? stiamo facendo un iserimento di studenti con relativi esami e professori
-    //(non ha senso) e sopratutto sono studenti non utenti  
+    //Non ho fatto it try catch utente non trovato perche nella traccia non c era
+    //specificato che dovevamo creare un metodo trova studente. ho avuto problemi di
+    //connessione e ho ritardato quindi non avrei avuto il tempo di implementarlo
 
 
 
-private static SqlCommand GetCommand(SqlConnection connection)
+private static SqlCommand GetCommand(SqlConnection connection)//metodo per la connesione
         {
+            SqlCommand command = new SqlCommand();           
             try
             {
-             
-                SqlCommand command = new SqlCommand();
-                command.Connection = connection;
-                command.CommandType = System.Data.CommandType.Text;
-                return command;
-                if (!GetCommand())
-                {
-                    throw new
-                }
+               
+
+                    command.Connection = connection;
+                    command.CommandType = System.Data.CommandType.Text;                              
+              
             }               
              catch (Exception ex) {
                 string message = ex.Message;
                 Console.WriteLine(message);
             }
-           
+            return command;
         }
 
         
@@ -92,7 +90,7 @@ private static SqlCommand GetCommand(SqlConnection connection)
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
+               
                 SqlCommand command = GetCommand(connection);
                 command.CommandText = "insert into dbo.Studente values(@Nome, @Cognome, @DataNascita, @Citta)";
                 command.Parameters.AddWithValue("@Nome", name);
@@ -100,7 +98,7 @@ private static SqlCommand GetCommand(SqlConnection connection)
                 command.Parameters.AddWithValue("@DataNascita", dataNascita);
                 command.Parameters.AddWithValue("@Citta", citta);
 
-
+                
                 command.ExecuteNonQuery();
 
                 connection.Close();
